@@ -1,5 +1,6 @@
 class PhoneNumber < ApplicationRecord
-  validates :number, presence: true, uniqueness: true
+  validates :number, presence: true
+  validates :number, uniqueness: true
   validate :custom_validation
 
   def self.create_random
